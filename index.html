@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Image Studio</title>
+</head>
+
+<body>
+	<div class="container disable">
+		<div class="row">
+			<div class="editor">
+				<div class="filter">
+					<h3>Filter</h3>
+					<div class="options">
+						<button id="brightness" class="active">Brightness</button>
+						<button id="saturation">Saturation</button>
+						<button id="inversion">Inversion</button>
+						<button id="grayscale">Grayscale</button>
+					</div>
+					<div class="range">
+						<div class="labels" id="brightness">
+							<span>Brightness</span>
+							<span>100%</span>
+						</div>
+						<input type="range" min="0" max="200" name="range" id="range" />
+					</div>
+				</div>
+
+				<div class="resize">
+					<h3>Resize</h3>
+					<div class="controls">
+						<input placeholder="width" type="number" id="width" class="width" disabled />
+						<input type="number" id="height" placeholder="height" class="height" disabled />
+					</div>
+				</div>
+				<div class="quality">
+					<div>
+						<h3>Quality</h5>
+							<span id="quality-val">70%</span>
+					</div>
+					<input type="range" min="0" max="100" value="70" />
+				</div>
+				<div class="rotate">
+					<button id="left">
+						<img src="public/rotate-left.svg" alt="">
+					</button>
+					<button id="right">
+						<img src="public/rotate-right.svg" alt="">
+					</button>
+					<button id="horizontal">
+						<img src="public/horizontal-scale.svg" alt="">
+					</button>
+					<button id="vertical"> <img src="public/vertical-scale.svg" alt="">
+					</button>
+				</div>
+			</div>
+			<div class="preview">
+				<button class="preview-icon">
+					<img src="public/preview.svg" alt="">
+				</button>
+				<div class="preview-mode">
+					<img src="public/placeholder.svg" alt="preview image placeholder" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="actions">
+			<button class="reset">Reset editor</button>
+			<div>
+				<input type="file" accept="image/*" id="upload" hidden>
+				<button class="choose">choose image</button>
+				<button class="save">Save image</button>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
